@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.transition-opacity {
+    transition-property: opacity;
+  }
+
+  /* Tambahkan ini ke file CSS atau Tailwind config */
+.backdrop-blur-md {
+    backdrop-filter: blur(50px);
+  }
+  
