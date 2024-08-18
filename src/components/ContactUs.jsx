@@ -79,7 +79,7 @@ const ContactUs = () => {
               <span className="font-bold">Phone:</span> +62 123 4567 890
             </p>
             <p className="mb-4">
-              <span className="font-bold">Email:</span> info@mulya-timur-global.com
+              <span className="font-bold">Email:</span> mtg@gmail.com
             </p>
             <div className="mt-8">
               <h4 className="text-xl font-semibold mb-4">Find Us on the Map</h4>

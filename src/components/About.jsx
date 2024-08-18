@@ -3,14 +3,19 @@ import React from 'react';
 // Data Dummy
 const aboutData = {
   hero: {
-    backgroundImage: 'https://picsum.photos/1600/900?random=2',
-    title: 'Introducing PT. Mulia Timur Global',
+    backgroundImage: 'https://picsum.photos/1600/900?random=20',
+    title: 'Know Me More',
     description: 'Learn more about our company, vision, mission, and the team behind our success.',
   },
   companyInfo: {
     profile: 'We are a pioneering company dedicated to delivering innovative solutions and exceptional services. With a strong commitment to excellence, we strive to create value and make a positive impact in our industry and community.',
     vision: 'To be the most trusted and innovative company in our industry, continuously improving and evolving to meet the needs of our customers.',
     mission: 'To provide top-notch products and services while fostering a culture of integrity, teamwork, and customer satisfaction.',
+    descriptionImages: [
+      'https://picsum.photos/600/400?random=1',
+      'https://picsum.photos/600/400?random=2',
+      'https://picsum.photos/600/400?random=3',
+    ],
     description: [
         "PT. Mulya Timur Global is a company that manages business units engaged in gold mining.",
         "PT. Mulya Timur Global has undergone several changes. The last change is the Declaration Deed Resolution of Shareholders No. 08 dated 13 November 2023 made in Notary Asep Dudi Suwardi, S.H, SPN and approved based on Acceptance Notification of Company Data Changes Number: AHU-0071866.AH.01.02 dated 21 November 2023.",
@@ -65,7 +70,7 @@ const About = () => {
   return (
     <div id='about' className=''>
       {/* Hero Section */}
-      <section  className="py-20 relative h-80 bg-blue-800 text-white flex items-center justify-center overflow-hidden pt-16">
+      <section  className="py-20 relative h-80 bg-slate-600 text-white flex items-center justify-center overflow-hidden pt-16">
         <img
           src={aboutData.hero.backgroundImage}
           alt="Hero Background"

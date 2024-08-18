@@ -96,7 +96,7 @@ const Navbar = () => {
       </div>
       </div> */}
           <nav className={`flex w-screen justify-around items-center shadow-lg py-6 px-4 ${navbarBg === 'bg-blur' ? 'backdrop-blur-md' : ''}`}>
-            <button onClick={handleScrollToHome} className={`font-bold text-3xl ${textColor}`}>MTG GOLD</button>
+            <button onClick={handleScrollToHome} className={`font-bold text-3xl ${textColor}`}>ALMAYRIZQ</button>
             <div className="hidden md:flex items-center gap-8">
               <button onClick={handleScrollToHome} className={`hover:text-yellow-300 duration-300 ${textColor}`}>
                 Home
