@@ -11,17 +11,10 @@ import { AiOutlineProject } from "react-icons/ai";
 
 const AboutMe = () => {
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white text-gray-900 py-16 px-8">
+    <section id="about-me" className="bg-gradient-to-b from-blue-50 to-white text-gray-900 py-16 px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Profile Section */}
-        <div className="text-center mb-16">
-          <img
-            src="https://picsum.photos/150"
-            alt="Profile"
-            className="w-32 h-32 mx-auto rounded-full shadow-lg mb-4 ring-4 ring-blue-300"
-          />
-          <h2 className="text-4xl font-bold text-gray-800 mb-2">John Doe</h2>
-          <p className="text-lg text-gray-600 mt-2">Full-Stack Developer | Tech Enthusiast</p>
+      <div className="relative z-10 text-center px-6 md:px-12 pb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">About Me</h1>
         </div>
 
         {/* Section: Programming Languages */}
@@ -49,30 +42,8 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* Section: Education */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-semibold mb-6 text-center flex items-center justify-center gap-2">
-            <MdSchool className="text-blue-600 text-3xl" />
-            Education
-          </h3>
-          <div className="bg-white shadow-xl rounded-lg p-6 flex items-center space-x-6">
-            <img
-              src="https://picsum.photos/100?random=1"
-              alt="University"
-              className="w-20 h-20 rounded-full ring-4 ring-blue-300"
-            />
-            <div>
-              <h4 className="text-2xl font-bold">Bachelor of Computer Science</h4>
-              <p className="text-gray-600">University of Example - 2018 - 2022</p>
-              <p className="mt-2">
-                Graduated with honors, specializing in software development and machine learning.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Section: Work Experience */}
-        <div className="mb-16">
+                {/* Section: Work Experience */}
+                <div className="mb-16">
           <h3 className="text-3xl font-semibold mb-6 text-center flex items-center justify-center gap-2">
             <MdWork className="text-gray-800 text-3xl" />
             Work Experience
@@ -80,28 +51,20 @@ const AboutMe = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                position: "Software Engineer",
-                company: "Tech Corp",
-                duration: "2022 - Present",
+                position: "FullStack Web Developer",
+                company: "Komisi Pemberantasan Korupsi",
+                duration: "Mar 2024 - Present",
                 description:
-                  "Developing and maintaining web applications, improving system performance, and collaborating with cross-functional teams.",
+                  "Developing and maintaining Dashboard Web Application for Public Relation Bureau using MERN Stack and Official Website of PPID KPK",
                 image: "https://picsum.photos/150?random=6",
               },
               {
-                position: "Junior Developer",
-                company: "Web Solutions",
-                duration: "2021 - 2022",
+                position: "Freelance Programmer",
+                company: "PT Mulia Timur Global",
+                duration: "Jun 2024 - Present",
                 description:
-                  "Worked on front-end and back-end development tasks, assisted in database management, and participated in code reviews.",
+                  "Developing and maintaining Accounting Web Application using MERN Stack",
                 image: "https://picsum.photos/150?random=7",
-              },
-              {
-                position: "Intern Developer",
-                company: "Start-Up Inc.",
-                duration: "2020 - 2021",
-                description:
-                  "Supported senior developers with various tasks, contributed to project documentation, and learned best practices in a professional environment.",
-                image: "https://picsum.photos/150?random=8",
               },
             ].map((job, index) => (
               <div
@@ -111,7 +74,7 @@ const AboutMe = () => {
                 <img
                   src={job.image}
                   alt={job.company}
-                  className="w-24 h-24 object-cover rounded-full mb-4 border-4 border-gray-200"
+                  className="w-24 h-24 object-cover mb-4 border-4 border-gray-200"
                 />
                 <h4 className="text-xl font-bold mb-2">{job.position}</h4>
                 <p className="text-gray-600 font-medium">{job.company}</p>
@@ -121,6 +84,45 @@ const AboutMe = () => {
             ))}
           </div>
         </div>
+
+        {/* Section: Education */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-semibold mb-6 text-center flex items-center justify-center gap-2">
+            <MdSchool className="text-blue-600 text-3xl" />
+            Certification
+          </h3>
+          <div className="bg-white shadow-xl rounded-lg p-6 flex items-center space-x-6 my-6">
+            <img
+              src="https://picsum.photos/100?random=1"
+              alt="University"
+              className="w-20 h-20 object-cover ring-4 ring-blue-300"
+            />
+            <div>
+              <h4 className="text-2xl font-bold">Responsive Web Design</h4>
+              <p className="text-gray-600">freeCodeCamp - 2022</p>
+              <p className="mt-2">
+                Learn Responsive Web Design using HTML, CSS & Javascript
+              </p>
+            </div>
+          </div>
+          <div className="bg-white shadow-xl rounded-lg p-6 flex items-center space-x-6 my-6">
+            <img
+              src="https://picsum.photos/100?random=1"
+              alt="University"
+              className="w-20 h-20 object-cover ring-4 ring-blue-300"
+            />
+            <div>
+              <h4 className="text-2xl font-bold">Mini Course Data Analytics</h4>
+              <p className="text-gray-600">RevoU - 2022</p>
+              <p className="mt-2">
+                Learn Data Analytics using Python, Excel, and Google Looker Studio
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
 
         {/* Section: Project Experience */}
         <div className="mb-16">
@@ -184,6 +186,76 @@ const AboutMe = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+
+        {/* Section: Skills */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-semibold mb-6 text-center flex items-center justify-center gap-2">
+            <AiOutlineProject className="text-purple-600 text-3xl" />
+            Skills
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Data Analyst",
+                skills: ["Python", "Excel"],
+                projects: [
+                  "Analyzed sales data for a major retailer",
+                  "Developed predictive models for customer behavior",
+                ],
+                image: "https://picsum.photos/150?random=18",
+              },
+              {
+                title: "Frontend Developer",
+                skills: ["HTML", "CSS", "ReactJS", "VueJS", "Tailwind CSS"],
+                projects: [
+                  "Built a responsive landing page for a startup",
+                  "Developed an interactive dashboard using React",
+                  "Created a custom theme with Tailwind CSS",
+                ],
+                image: "https://picsum.photos/150?random=19",
+              },
+              {
+                title: "Backend Developer",
+                skills: ["ExpressJS", "Laravel"],
+                projects: [
+                  "Developed a RESTful API for an e-commerce platform using ExpressJS",
+                  "Built a blog system with authentication using Laravel",
+                ],
+                image: "https://picsum.photos/150?random=20",
+              },
+              {
+                title: "Full-Stack Web Developer",
+                skills: ["Laravel + Vue", "MERN Stack"],
+                projects: [
+                  "Created a full-stack application using Laravel and Vue for a project management tool",
+                  "Developed a social networking site using the MERN stack",
+                ],
+                image: "https://picsum.photos/150?random=21",
+              },
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-xl rounded-lg p-6 flex flex-col items-center text-center"
+              >
+                <img
+                  src={skill.image}
+                  alt={skill.title}
+                  className="w-full h-32 object-cover mb-4 border-4 border-gray-200"
+                />
+                <h4 className="text-xl font-bold mb-2">{skill.title}</h4>
+                <p className="text-gray-600 font-medium">Skills: {skill.skills.join(", ")}</p>
+                <p className="text-gray-600 mt-2">
+                  Projects:
+                  <ul className="list-disc list-inside mt-2">
+                    {skill.projects.map((project, idx) => (
+                      <li key={idx} className="text-gray-600">{project}</li>
+                    ))}
+                  </ul>
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Section: Recommendations */}
@@ -258,7 +330,7 @@ const AboutMe = () => {
                     <img
                       src={recommendation.image}
                       alt={recommendation.name}
-                      className="w-20 h-20 object-cover rounded-full mb-4 border-4 border-indigo-300"
+                      className="w-20 h-20 object-cover mb-4 border-4 border-indigo-300"
                     />
                     <h4 className="text-xl font-semibold mb-2">{recommendation.name}</h4>
                     <p className="text-gray-600 italic">{recommendation.role}</p>
@@ -275,3 +347,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+

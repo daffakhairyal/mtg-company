@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from 'react-scroll';
 
 const HeroSection = () => {
   const heroData = {
@@ -45,6 +46,14 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70"></div>
       </div>
       <div className="relative z-10 text-center max-w-2xl px-6">
+        {/* Profile Picture */}
+        <div className="relative mb-6">
+          <img
+            src="https://picsum.photos/150" // Replace with your actual photo URL
+            alt="Profile"
+            className="w-64 h-auto rounded-full mx-auto mb-4 ring-4 ring-blue-300 shadow-lg"
+          />
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           {heroData.title}
         </h1>
@@ -58,6 +67,14 @@ const HeroSection = () => {
           className="text-lg md:text-xl mb-4"
           repeat={Infinity} // Ulangi animasi secara terus-menerus
         />
+        <Link
+          to="about-me"
+          smooth={true}
+          duration={500}
+          className="cursor-pointer inline-block mt-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+        >
+          About Me
+        </Link>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import Products from '../components/Products'
 import Career from '../components/Career'
 import AboutMe from '../components/AboutMe'
 import ProjectList from '../components/ProjectList'
+import StorePage from '../components/StorePage'
 
 const LandingPage = () => {
   return (
@@ -16,6 +17,7 @@ const LandingPage = () => {
       <Navbar/>
       <HeroSection/>
       <AboutMe/>
+      <StorePage/>
       <About/>
       <ProjectList/>
       <Products/>
