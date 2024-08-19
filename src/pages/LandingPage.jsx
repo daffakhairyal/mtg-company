@@ -7,13 +7,17 @@ import About from '../components/About'
 import ContactUs from '../components/ContactUs'
 import Products from '../components/Products'
 import Career from '../components/Career'
+import AboutMe from '../components/AboutMe'
+import ProjectList from '../components/ProjectList'
 
 const LandingPage = () => {
   return (
     <div>
       <Navbar/>
       <HeroSection/>
+      <AboutMe/>
       <About/>
+      <ProjectList/>
       <Products/>
       <Projects/>
       <ContactUs/>
